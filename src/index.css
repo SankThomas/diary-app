@@ -1,13 +1,44 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+img {
+  max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style-type: none;
+}
+
+button,
+a {
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.hero {
+  background: linear-gradient(180deg, #853799 0%, #e74f81 100%);
+  /* filter: blur(150px); */
+  /* --webkit-filter: blur(150px); */
+}
+
+.btn {
+  @apply bg-emerald-500 py-2 px-10 rounded shadow text-white font-bold tracking-wide border-2 border-emerald-500 hover:bg-transparent transition-all duration-150;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    background: linear-gradient(90deg, #853799 0%, #e74f81 100%);
+    /* filter: blur(300px);
+    --webkit-filter: blur(300px); */
+  }
 }
