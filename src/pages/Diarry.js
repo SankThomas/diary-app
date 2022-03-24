@@ -19,6 +19,7 @@ export default function Diarry() {
           <form onSubmit={handleSubmit}>
             {/* Add markdown support */}
             {/* Toggle for "Enter key is submit" */}
+            <small>This textarea supports Markdown :)</small>
             <textarea
               name="new-entry"
               id="new-entry"

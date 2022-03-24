@@ -1,6 +1,9 @@
 import React, { useContext } from "react"
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai"
 import EntriesContext from "../context/context"
+import { Remarkable } from "remarkable"
+
+const md = new Remarkable()
 
 export default function NewEntry() {
   const { entries, handleDelete, handleEdit } = useContext(EntriesContext)
@@ -17,7 +20,10 @@ export default function NewEntry() {
               <small className="block text-xs px-5 pt-2">
                 Date of entry: {date}
               </small>
-              <p className="px-5 pb-2 text-white">{description}</p>
+              <p
+                className="px-5 pb-2 text-white"
+                dangerouslySetInnerHTML={{ __html: md.render(description) }}
+              ></p>
             </div>
 
             <ul className="flex items-center justify-end md:justify-start mt-3 md:mt-0">
