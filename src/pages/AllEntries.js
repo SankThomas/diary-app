@@ -31,7 +31,7 @@ export default function AllEntries() {
             ) : (
               entries.map(({ id, description, date }) => (
                 <React.Fragment key={id}>
-                  <p>
+                  <p className="text-center text-sm md:text-left">
                     You have made {entries.length} diarry entries. You're
                     amazing!
                   </p>
