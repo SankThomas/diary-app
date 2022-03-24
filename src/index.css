@@ -27,18 +27,64 @@ body {
 
 .hero {
   background: linear-gradient(180deg, #853799 0%, #e74f81 100%);
-  /* filter: blur(150px); */
-  /* --webkit-filter: blur(150px); */
+  /* filter: blur(100px);
+  --webkit-filter: blur(100px); */
+  width: 100vw;
+  height: calc(100vh - 0.1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.diarry-hero {
+  background: linear-gradient(
+    180deg,
+    hsl(288, 86%, 74%) 0%,
+    hsl(340, 89%, 75%) 100%
+  );
+  filter: blur(500px);
+  --webkit-filter: blur(500px);
+  width: 100vw;
+  height: calc(100vh - 0.1px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .btn {
   @apply bg-emerald-500 py-2 px-10 rounded shadow text-white font-bold tracking-wide border-2 border-emerald-500 hover:bg-transparent transition-all duration-150;
 }
 
+.btn-icon {
+  background: linear-gradient(180deg, #853799 0%, #e74f81 100%);
+  @apply p-3 rounded-full shadow transition-all duration-150;
+}
+
+.btn-icon:hover {
+  background: linear-gradient(180deg, #e74f81 0%, #853799 100%);
+}
+
+.btn-submit {
+  background: linear-gradient(180deg, #853799 0%, #e74f81 100%);
+  @apply py-2 px-6 rounded shadow transition-all duration-150 text-white text-sm;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(180deg, #e74f81 0%, #853799 100%);
+}
+
+.description {
+  background: linear-gradient(90deg, #e683ff 0%, #ff96b9 100%);
+}
+
 @media (min-width: 1024px) {
   .hero {
     background: linear-gradient(90deg, #853799 0%, #e74f81 100%);
-    /* filter: blur(300px);
-    --webkit-filter: blur(300px); */
+    /* filter: blur(150px);
+    --webkit-filter: blur(150px); */
   }
 }
