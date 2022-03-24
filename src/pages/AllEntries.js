@@ -47,12 +47,12 @@ export default function AllEntries() {
                           <small className="block text-xs px-5 pt-2">
                             Date of entry: {date}
                           </small>
-                          <p
-                            className="px-5 pb-2 text-white"
+                          <div
+                            className="md px-5 pb-2 text-white"
                             dangerouslySetInnerHTML={{
                               __html: md.render(description),
                             }}
-                          ></p>
+                          ></div>
                         </div>
 
                         <ul className="flex items-center justify-end md:justify-start mt-3 md:mt-0">
