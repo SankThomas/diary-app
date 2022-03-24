@@ -23,7 +23,7 @@ export default function AllEntries() {
           <div>
             {entries.length <= 0 ? (
               <div className="text-center">
-                <p className="mb-5">
+                <p className="mb-5 text-slate-700">
                   It's quiet. Too quiet. Try adding a new entry in your diary
                   and it will appear here
                 </p>
@@ -33,7 +33,7 @@ export default function AllEntries() {
               </div>
             ) : (
               <div>
-                <p className="text-center text-sm md:text-left">
+                <p className="text-center text-sm md:text-left text-slate-700">
                   You have made {entries.length} diarry entries. You're amazing!
                 </p>
                 <div className="grid grid-cols-1 gap-5 mt-5">
