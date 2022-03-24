@@ -1,48 +1,21 @@
-import React, { useEffect, useState } from "react"
-import { Entries, Sidebar } from "../components"
-import { v4 as uuidv4 } from "uuid"
-
-const getStoredEntries = () => {
-  let entries = localStorage.getItem("entries")
-
-  if (entries) {
-    return JSON.parse(localStorage.getItem("entries"))
-  } else {
-    return []
-  }
-}
+import { useContext } from "react"
+import { MobileBar, Sidebar, NewEntry } from "../components"
+import EntriesContext from "../context/context"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function Diarry() {
-  const [entries, setEntries] = useState(getStoredEntries())
-  const [text, setText] = useState("")
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if (!text) {
-      alert("There's no entry in your diarry")
-    } else {
-      const newEntry = {
-        id: uuidv4(),
-        description: text,
-      }
-      setEntries([newEntry, ...entries])
-      setText("")
-    }
-  }
-
-  useEffect(() => {
-    localStorage.setItem("entries", JSON.stringify(entries))
-  }, [entries])
+  const { text, setText, handleSubmit } = useContext(EntriesContext)
 
   return (
     <>
       <section className="diarry-hero"></section>
-      <div className="relative z-50">
+      <div className="relative z-50 px-5">
         <article>
+          <MobileBar />
           <Sidebar />
         </article>
-        <article className="lg:max-w-5xl lg:mx-auto py-10 lg:py-14">
+        <article className="md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-4xl py-10 lg:py-14">
           <form onSubmit={handleSubmit}>
             {/* Add markdown support */}
             {/* Toggle for "Enter key is submit" */}
@@ -51,7 +24,7 @@ export default function Diarry() {
               id="new-entry"
               cols="30"
               rows="8"
-              className="w-full p-3 rounded shadow resize-none"
+              className="w-full p-3 rounded-md shadow resize-none"
               placeholder="So today..."
               required
               value={text}
@@ -61,8 +34,9 @@ export default function Diarry() {
               Add new entry
             </button>
           </form>
+          <ToastContainer />
 
-          <Entries entries={entries} />
+          <NewEntry />
         </article>
       </div>
     </>
