@@ -1,9 +1,11 @@
 # Diarry
 
-Desktop
+##### Desktop
+
 ![Diarry](./diarry-1.png)
 
-Mobile
+##### Mobile
+
 ![Diarry](./diarry-mobile-1.png)
 
 https://diarry.netlify.app
@@ -29,10 +31,12 @@ Built by Thomas Sankara
 
 ## More Images
 
-Desktop
+##### Desktop
+
 ![Diarry](./diarry-2.png)
 ![Diarry](./diarry-3.png)
 
-Mobile
+##### Mobile
+
 ![Diarry](./diarry-mobile-2.png)
 ![Diarry](./diarry-mobile-3.png)
