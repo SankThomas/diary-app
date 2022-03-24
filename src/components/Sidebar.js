@@ -7,7 +7,7 @@ import { Link } from "react-router-dom"
 export default function Sidebar() {
   return (
     <>
-      <aside className="bg-slate-800 h-full fixed left-0 top-0 px-5">
+      <aside className="hidden md:block bg-slate-800 h-full fixed left-0 top-0 px-5">
         <ul className="mt-10">
           <li>
             <Link
