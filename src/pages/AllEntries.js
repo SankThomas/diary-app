@@ -16,7 +16,7 @@ export default function AllEntries() {
           <Sidebar />
         </article>
 
-        <article className="md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-4xl py-10 lg:py-14">
+        <article className="md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-4xl pt-10 pb-20 lg:py-14">
           <div className="grid grid-cols-1 gap-5 mt-10">
             {entries.length <= 0 ? (
               <div className="text-center">
