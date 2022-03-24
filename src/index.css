@@ -46,7 +46,7 @@ body {
   );
   filter: blur(500px);
   --webkit-filter: blur(500px);
-  width: 100vw;
+  width: 95vw;
   height: calc(100vh - 0.1px);
   position: absolute;
   top: 0;
