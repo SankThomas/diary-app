@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -79,6 +79,52 @@ body {
 
 .description {
   background: linear-gradient(90deg, #e683ff 0%, #ff96b9 100%);
+}
+
+.md h1 {
+  @apply text-4xl;
+}
+
+.md h2 {
+  @apply text-3xl;
+}
+
+.md h3 {
+  @apply text-2xl;
+}
+
+.md h4 {
+  @apply text-xl;
+}
+
+.md h5 {
+  @apply text-lg;
+}
+
+.md h6 {
+  @apply text-base;
+}
+
+.md p {
+  @apply text-base;
+}
+
+.md img {
+  max-width: 100%;
+}
+
+.md b,
+.md strong {
+  @apply font-bold;
+}
+
+.md code {
+  font-family: "Roboto Mono", sans-serif;
+  @apply text-base;
+}
+
+.md a {
+  @apply text-indigo-500 underline text-sm;
 }
 
 @media (min-width: 1024px) {
