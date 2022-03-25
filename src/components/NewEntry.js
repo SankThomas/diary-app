@@ -21,7 +21,7 @@ export default function NewEntry() {
                 Date of entry: {date}
               </small>
               <div
-                className="md px-5 pb-2 text-white"
+                className="md px-5 pb-2 text-white text-sm"
                 dangerouslySetInnerHTML={{ __html: md.render(description) }}
               ></div>
             </div>
