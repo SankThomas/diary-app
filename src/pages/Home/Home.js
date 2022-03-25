@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { ProductHunt } from "../../buttons"
 import logo from "../../images/logo.svg"
 
 export default function HomeHero() {
@@ -14,9 +15,16 @@ export default function HomeHero() {
         <p className="text-white text-center px-5 mb-10 lg:text-xl">
           Free, responsive and accessible diary app for you.
         </p>
-        <Link to="/diarry" className="btn">
-          I want this
-        </Link>
+        <ul className="flex flex-col md:flex-row items-center justify-center">
+          <li className="mb-5 md:mb-0 md:mr-5">
+            <Link to="/diarry" className="btn">
+              I want this
+            </Link>
+          </li>
+          <li>
+            <ProductHunt />
+          </li>
+        </ul>
       </div>
     </>
   )
