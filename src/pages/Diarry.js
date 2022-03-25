@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 
 export default function Diarry() {
-  const { text, setText, handleSubmit } = useContext(EntriesContext)
+  const { text, setText, isEditing, handleSubmit } = useContext(EntriesContext)
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Diarry() {
             {/* Add markdown support */}
             {/* Toggle for "Enter key is submit" */}
             <div className="mb-2 flex items-start flex-col md:flex-row">
-              <p className="text-sm text-slate-700">
+              <p className="text-sm lg:text-base text-slate-700">
                 This textarea supports Markdown :)
               </p>
               <article>
@@ -35,14 +35,14 @@ export default function Diarry() {
               id="new-entry"
               cols="30"
               rows="8"
-              className="w-full p-3 rounded-md shadow resize-none"
+              className="w-full p-3 rounded-md shadow resize-none text-sm lg:text-base"
               placeholder="So today..."
               required
               value={text}
               onChange={(e) => setText(e.target.value)}
             ></textarea>
             <button className="btn-submit mt-3" onClick={handleSubmit}>
-              Add new entry
+              {isEditing ? "Editing Entry" : "Add New Entry"}
             </button>
           </form>
           <ToastContainer />
