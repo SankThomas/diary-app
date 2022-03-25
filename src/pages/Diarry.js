@@ -15,7 +15,7 @@ export default function Diarry() {
           <MobileBar />
           <Sidebar />
         </article>
-        <article className="md:max-w-xl md:mx-auto lg:max-w-3xl xl:max-w-4xl pt-10 pb-32 lg:py-14">
+        <article className="md:max-w-xl md:mx-auto lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl pt-10 pb-32 lg:py-14">
           <form onSubmit={handleSubmit}>
             {/* Add markdown support */}
             {/* Toggle for "Enter key is submit" */}
