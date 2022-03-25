@@ -27,7 +27,7 @@ export default function AllEntries() {
                   It's quiet. Too quiet. Try adding a new entry in your diary
                   and it will appear here
                 </p>
-                <Link to="/diarry" className="btn-icon text-sm text-white">
+                <Link to="/diarry" className="btn-submit text-sm text-white">
                   Go to Diarry
                 </Link>
               </div>
