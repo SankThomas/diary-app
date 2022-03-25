@@ -106,7 +106,7 @@ body {
 }
 
 .md p {
-  @apply text-base;
+  @apply text-sm;
 }
 
 .md img {
