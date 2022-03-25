@@ -13,7 +13,8 @@ export default function HomeHero() {
           Diarry
         </h1>
         <p className="text-white text-center px-5 mb-10 lg:text-xl">
-          Free, responsive and accessible diary app for you.
+          Free, responsive and accessible diary app for you. No login - just
+          click the button and begin diarryfying.
         </p>
         <ul className="flex flex-col md:flex-row items-center justify-center">
           <li className="mb-5 md:mb-0 md:mr-5">
