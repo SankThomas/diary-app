@@ -32,7 +32,7 @@ export const EntriesContextProvider = ({ children }) => {
     e.preventDefault()
 
     if (!text) {
-      toast("Oops. Sorry, there's no entry in your diarry")
+      toast.info("Oops. Sorry, there's no entry in your diarry")
     } else {
       const newEntry = {
         id: uuidv4(),
