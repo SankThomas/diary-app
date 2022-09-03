@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { MobileBar, Sidebar, NewEntry } from "../components"
 import EntriesContext from "../context/context"
 import { ToastContainer } from "react-toastify"
@@ -20,17 +21,20 @@ export default function Diarry() {
             {/* Add markdown support */}
             {/* Toggle for "Enter key is submit" */}
             <div className="mb-2 flex items-start flex-col md:flex-row">
-              <p className="text-sm lg:text-base text-slate-700">
+              <p className="text-sm lg:text-base text-slate-700 mb-10">
                 This textarea supports{" "}
-                <a
+                {/* <a
                   href="https://www.markdownguide.org/getting-started/"
                   target="_blank"
                   rel="noreferrer"
                   className="text-indigo-600 underline"
-                >
-                  Markdown
-                </a>{" "}
-                :)
+                > */}
+                Markdown :).
+                {/* </a>{" "} */}{" "}
+                <Link to="/markdown-help" className="underline text-indigo-600">
+                  Read this article
+                </Link>{" "}
+                if you don't know how you use Markdown
               </p>
               <article>
                 {/* <button className="text-xs text-emerald-500">
@@ -50,7 +54,7 @@ export default function Diarry() {
               value={text}
               onChange={(e) => setText(e.target.value)}
             ></textarea>
-            <button className="btn-submit mt-3" onClick={handleSubmit}>
+            <button className="btn-submit mt-10" onClick={handleSubmit}>
               {isEditing ? "Editing Entry" : "Add New Entry"}
             </button>
           </form>
