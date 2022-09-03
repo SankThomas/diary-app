@@ -21,7 +21,16 @@ export default function Diarry() {
             {/* Toggle for "Enter key is submit" */}
             <div className="mb-2 flex items-start flex-col md:flex-row">
               <p className="text-sm lg:text-base text-slate-700">
-                This textarea supports Markdown :)
+                This textarea supports{" "}
+                <a
+                  href="https://www.markdownguide.org/getting-started/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-indigo-600 underline"
+                >
+                  Markdown
+                </a>{" "}
+                :)
               </p>
               <article>
                 {/* <button className="text-xs text-emerald-500">
@@ -45,7 +54,7 @@ export default function Diarry() {
               {isEditing ? "Editing Entry" : "Add New Entry"}
             </button>
           </form>
-          <ToastContainer />
+          <ToastContainer theme="colored" />
 
           <NewEntry />
         </article>
