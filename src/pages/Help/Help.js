@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import { MobileBar, Sidebar } from "../../components"
+import React from "react";
+import { Link } from "react-router-dom";
+import { MobileBar, Sidebar } from "../../components";
 
 export default function Help() {
   return (
@@ -64,9 +64,20 @@ export default function Help() {
               parentheses [Text](https://link.com)
             </li>
             <code>[Text](https://link.com)</code>
+            <li>
+              To add images, begin with an exclamation(!) mark, then square
+              brackets that will contain text that will show up in case the
+              image fails to load, and finally parentheses linking to the image.
+            </li>
+            <code>
+              ![Text that appears if the image fails to
+              load](https://link-to-the-image.jpg)
+            </code>
+            <p>The link to the image can also be a relative path such as:</p>
+            <code>![alt text](./relative-path-to-the-image.jpg)</code>
           </ol>
         </article>
       </section>
     </>
-  )
+  );
 }
