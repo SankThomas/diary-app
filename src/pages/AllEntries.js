@@ -1,14 +1,15 @@
-import React, { useContext } from "react"
-import { AiOutlineDelete } from "react-icons/ai"
-import { Link } from "react-router-dom"
-import { MobileBar, Sidebar } from "../components"
-import EntriesContext from "../context/context"
-import { Remarkable } from "remarkable"
+import React, { useContext } from "react";
+import { AiOutlineDelete } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { MobileBar, Sidebar } from "../components";
+import EntriesContext from "../context/context";
+import { Remarkable } from "remarkable";
+import { Modal } from "../components";
 
-const md = new Remarkable()
+const md = new Remarkable();
 
 export default function AllEntries() {
-  const { entries, handleDelete } = useContext(EntriesContext)
+  const { entries, openModal, setOpenModal } = useContext(EntriesContext);
 
   return (
     <>
@@ -58,13 +59,14 @@ export default function AllEntries() {
                         <ul className="flex items-center justify-end md:justify-start mt-3 md:mt-0">
                           <li>
                             <button
-                              onClick={() => handleDelete(id)}
+                              onClick={() => setOpenModal(true)}
                               className="py-1 px-4 rounded shadow bg-red-500 text-white border border-red-500 hover:bg-transparent transition-all duration-150 hover:text-red-500"
                             >
                               <AiOutlineDelete />
                             </button>
                           </li>
                         </ul>
+                        {openModal && <Modal id={id} />}
                       </article>
                     </React.Fragment>
                   ))}
@@ -75,5 +77,5 @@ export default function AllEntries() {
         </article>
       </div>
     </>
-  )
+  );
 }
