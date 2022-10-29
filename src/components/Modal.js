@@ -5,7 +5,7 @@ export default function Modal({ id }) {
   const { handleDelete, setOpenModal } = useContext(EntriesContext);
 
   return (
-    <article className="bg-black bg-opacity-20 fixed top-0 left-0 right-0 bottom-0">
+    <article className="bg-black bg-opacity-60 fixed top-0 left-0 right-0 bottom-0">
       <div className="bg-white p-4 rounded shadow text-white fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-9/12 mx-auto md:max-w-md">
         <h2 className="font-bold text-2xl mb-4 text-slate-800">Danger Zone!</h2>
         <p className="text-slate-600">
