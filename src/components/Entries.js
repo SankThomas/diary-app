@@ -1,9 +1,11 @@
-import React, { useContext } from "react"
-import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai"
-import EntriesContext from "../context/context"
+import React, { useContext } from "react";
+import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
+import EntriesContext from "../context/context";
+import { Modal } from ".";
 
 export default function Entries() {
-  const { entries, handleDelete, handleEdit } = useContext(EntriesContext)
+  const { entries, handleEdit, openModal, setOpenModal } =
+    useContext(EntriesContext);
 
   return (
     <>
@@ -31,16 +33,17 @@ export default function Entries() {
               </li>
               <li>
                 <button
-                  onClick={() => handleDelete(id)}
+                  onClick={() => setOpenModal(true)}
                   className="py-1 px-4 rounded shadow bg-red-500 text-white border border-red-500 hover:bg-transparent transition-all duration-150 hover:text-red-500"
                 >
                   <AiOutlineDelete />
                 </button>
               </li>
+              {openModal && <Modal id={id} />}
             </ul>
           </article>
         ))}
       </section>
     </>
-  )
+  );
 }
