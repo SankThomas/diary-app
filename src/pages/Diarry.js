@@ -1,12 +1,12 @@
-import { useContext } from "react"
-import { Link } from "react-router-dom"
-import { MobileBar, Sidebar, NewEntry } from "../components"
-import EntriesContext from "../context/context"
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { MobileBar, Sidebar, NewEntry } from "../components";
+import EntriesContext from "../context/context";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Diarry() {
-  const { text, setText, isEditing, handleSubmit } = useContext(EntriesContext)
+  const { text, setText, isEditing, handleSubmit } = useContext(EntriesContext);
 
   return (
     <>
@@ -48,7 +48,7 @@ export default function Diarry() {
               id="new-entry"
               cols="30"
               rows="8"
-              className="w-full p-3 rounded-md shadow resize-none text-sm lg:text-base"
+              className="w-full p-3 rounded-md shadow resize-none text-sm lg:text-base outline-none ring-2 ring-pink-500 hover:ring-8 hover:ring-pink-300 transition-all duration-150 focus:ring-8 focus:ring-pink-300"
               placeholder="So today..."
               required
               value={text}
@@ -64,5 +64,5 @@ export default function Diarry() {
         </article>
       </div>
     </>
-  )
+  );
 }
