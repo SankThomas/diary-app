@@ -20,7 +20,7 @@ export default function Sidebar() {
           <li>
             <NavLink
               to="/diarry" style={({ isActive }) => isActive ? activeStyle : undefined }
-              className="mb-5 flex items-center justify-center"
+              className="mb-5 flex items-center justify-center p-1"
             >
               <button className="btn-icon xl:mr-2">
                 <RiChatNewLine className="text-white" />{" "}
@@ -33,7 +33,7 @@ export default function Sidebar() {
           <li>
             <NavLink
               to="/all-entries" style={({ isActive }) => isActive ? activeStyle : undefined }
-              className="flex items-center justify-center"
+              className="flex items-center justify-center p-1"
             >
               <button className="btn-icon xl:mr-2">
                 <AiOutlineFolder className="text-white" />
@@ -60,7 +60,7 @@ export default function Sidebar() {
           </li>
 
           <li className="absolute left-5 bottom-5">
-            <NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined } className="flex items-center justify-center">
+            <NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined } className="flex items-center justify-center p-1">
               <button className="btn-icon xl:mr-2">
                 <AiOutlineRollback className="text-white" />
               </button>
