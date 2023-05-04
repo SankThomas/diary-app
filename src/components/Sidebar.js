@@ -8,9 +8,9 @@ import { NavLink } from "react-router-dom"
 export default function Sidebar() {
   let activeStyle = {
     fontWeight: "bold",
-    backgroundColor: "#cbd5e1",
+    backgroundColor: "#334155",
     padding: 4,
-    borderRadius: 5,
+    borderRadius: 10,
   };
   
   return (
