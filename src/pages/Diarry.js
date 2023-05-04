@@ -55,7 +55,7 @@ export default function Diarry() {
               onChange={(e) => setText(e.target.value)}
             ></textarea>
             <button className="btn-submit mt-10" onClick={handleSubmit}>
-              {isEditing ? "Editing Entry" : "Add New Entry"}
+              {isEditing ? "Finish Editing" : "Add New Entry"}
             </button>
           </form>
           <ToastContainer theme="colored" />
