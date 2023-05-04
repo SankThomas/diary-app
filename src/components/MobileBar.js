@@ -2,34 +2,41 @@ import React from "react"
 import { RiChatNewLine } from "react-icons/ri"
 import { AiOutlineFolder, AiOutlineRollback } from "react-icons/ai"
 import { RiPatreonLine } from "react-icons/ri"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function MobileBar() {
+  let activeStyle = {
+    fontWeight: "bold",
+    backgroundColor: "#334155",
+    padding: 4,
+    borderRadius: 10,
+  };
+  
   return (
     <>
       <article className="md:hidden fixed left-0 bottom-0 px-5 py-2 bg-slate-800 w-full">
         <ul className="flex items-center justify-between sm:justify-evenly">
           <li>
-            <Link
-              to="/diarry"
-              className="flex flex-col items-center justify-center"
+            <NavLink
+              to="/diarry" style={({ isActive }) => isActive ? activeStyle : undefined }
+              className="flex flex-col items-center justify-center p-1"
             >
               <button className="btn-icon">
                 <RiChatNewLine className="text-white" />{" "}
               </button>
               <span className="text-slate-400 text-xs mt-2">New entry</span>
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
-              to="/all-entries"
-              className="flex flex-col items-center justify-center"
+            <NavLink
+              to="/all-entries" style={({ isActive }) => isActive ? activeStyle : undefined }
+              className="flex flex-col items-center justify-center p-1"
             >
               <button className="btn-icon">
                 <AiOutlineFolder className="text-white" />
               </button>
               <span className="text-slate-400 text-xs mt-2">All entries</span>
-            </Link>
+            </NavLink>
           </li>
           <li>
             <a
@@ -45,12 +52,12 @@ export default function MobileBar() {
             </a>
           </li>
           <li className="">
-            <Link to="/" className="flex flex-col items-center justify-center">
+            <NavLink to="/" style={({ isActive }) => isActive ? activeStyle : undefined } className="flex flex-col items-center justify-center p-1">
               <button className="btn-icon">
                 <AiOutlineRollback className="text-white" />
               </button>
               <span className="text-slate-400 text-xs mt-2">Homepage</span>
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </article>
